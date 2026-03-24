@@ -171,7 +171,7 @@ func (pcs *BaiduPCS) PrepareFilesDirectoriesList(path string, options *OrderOpti
 	pcsURL := pcs.generatePCSURL("file", "list", map[string]string{
 		"path":  path,
 		"by":    *(*string)(unsafe.Pointer(&options.By)),
-		"order": *(*string)(unsafe.Pointer(&options.Order))
+		"order": *(*string)(unsafe.Pointer(&options.Order)),
 	})
 	baiduPCSVerbose.Infof("%s URL: %s\n", OperationFilesDirectoriesList, pcsURL)
 
